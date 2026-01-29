@@ -14,4 +14,4 @@ We offer training and consultancy services to businesses, educational establishm
 
 ## Get In Touch
 
-If your organisation is interested in training or consultancy, [contact us](mailto:ableminds@mailfence.com) and we will arrange an informal discussion with the appropriate staff to explore your requirements.
+If your organisation is interested in training or consultancy, contact us at {{< email user="ableminds" domain="mailfence.com" >}} and we will arrange an informal discussion with the appropriate staff to explore your requirements.

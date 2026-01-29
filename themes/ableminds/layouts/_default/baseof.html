@@ -40,7 +40,7 @@
     <div class="container">
       <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
       <p class="footer-contact">
-        <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        <span class="email-protect" data-u="ableminds" data-d="mailfence.com"></span>
         &middot; {{ .Site.Params.address }}
       </p>
     </div>
@@ -50,6 +50,15 @@
     document.querySelector('.menu-toggle').addEventListener('click', function() {
       document.querySelector('.site-nav').classList.toggle('open');
       this.classList.toggle('open');
+    });
+    document.querySelectorAll('.email-protect').forEach(function(el) {
+      var u = el.getAttribute('data-u');
+      var d = el.getAttribute('data-d');
+      var addr = u + '@' + d;
+      var a = document.createElement('a');
+      a.href = 'mail' + 'to:' + addr;
+      a.textContent = addr;
+      el.replaceWith(a);
     });
   </script>
 </body>

@@ -19,4 +19,4 @@ We welcome outreach from:
 
 We accept referrals and will work alongside your organisation to reduce assessment waiting times.
 
-To discuss a partnership, contact us at [ableminds@mailfence.com](mailto:ableminds@mailfence.com).
+To discuss a partnership, contact us at {{< email user="ableminds" domain="mailfence.com" >}}.
