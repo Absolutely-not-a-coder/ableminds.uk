@@ -1,0 +1,425 @@
+/* =============================================
+   Able Minds — Professional Services Theme
+   Warm, accessible, trustworthy
+   ============================================= */
+
+:root {
+  --navy: #00102E;
+  --navy-light: #001a44;
+  --gold: #FFD00A;
+  --gold-muted: #e6bc09;
+  --gold-light: #fff3b0;
+  --cream: #fafaf5;
+  --white: #ffffff;
+  --text: #2a2a2a;
+  --text-light: #555;
+  --text-on-dark: #e8e8e8;
+  --border: #e0ddd5;
+  --max-width: 960px;
+  --header-height: 72px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Header ---- */
+.site-header {
+  background: var(--navy);
+  color: var(--text-on-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.site-title {
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: 1.2;
+}
+
+.site-logo {
+  height: 48px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.title-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.title-tagline {
+  font-size: 0.7rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.site-nav a {
+  color: var(--text-on-dark);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Hero ---- */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 4rem 0 3.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+/* ---- Page Header ---- */
+.page-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 2.5rem 0 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ---- Content ---- */
+.content-section {
+  padding: 3rem 0;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin: 2.5rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--gold);
+}
+
+.content-section h2:first-child {
+  margin-top: 0;
+}
+
+.content-section h3 {
+  font-size: 1.2rem;
+  color: var(--navy-light);
+  margin: 1.8rem 0 0.6rem;
+}
+
+.content-section p {
+  margin-bottom: 1rem;
+}
+
+.content-section ul,
+.content-section ol {
+  margin: 0.5rem 0 1.2rem 1.5rem;
+}
+
+.content-section li {
+  margin-bottom: 0.4rem;
+}
+
+.content-section a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.content-section a:hover {
+  color: var(--gold-muted);
+}
+
+/* ---- Cards (for services, packages etc) ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.8rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 16, 46, 0.08);
+}
+
+.card h3 {
+  color: var(--navy);
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  border-bottom: none;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ---- FAQ ---- */
+.faq-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+.faq-item p {
+  color: var(--text-light);
+}
+
+/* ---- Package tiers ---- */
+.package {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.package h3 {
+  color: var(--navy);
+  margin: 0 0 0.8rem;
+  border-bottom: none;
+}
+
+.package.featured {
+  border-color: var(--gold);
+}
+
+/* ---- Contact ---- */
+.contact-info {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+
+.contact-info dt {
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 1rem;
+}
+
+.contact-info dt:first-child {
+  margin-top: 0;
+}
+
+.contact-info dd {
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- List items ---- */
+.list-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.list-item h2 {
+  font-size: 1.2rem;
+  border-bottom: none;
+  margin: 0 0 0.3rem;
+}
+
+.list-item p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--navy);
+  color: var(--text-on-dark);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  margin-top: 0.4rem;
+  color: #999;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-main {
+    font-size: 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}

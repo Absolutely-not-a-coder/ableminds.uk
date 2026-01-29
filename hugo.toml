@@ -1,0 +1,50 @@
+baseURL = 'https://ableminds.uk/'
+languageCode = 'en-gb'
+title = 'Able Minds'
+theme = 'ableminds'
+
+[params]
+  description = "Neurodivergent Support & Assessment"
+  author = "Able Minds"
+  email = "ableminds@mailfence.com"
+  address = "The Wesley Centre, Blythe Road, Maltby"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menus.main]]
+  name = 'Welcome'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = 'Our Story'
+  pageRef = '/our-story'
+  weight = 20
+
+[[menus.main]]
+  name = 'Services'
+  pageRef = '/services'
+  weight = 30
+
+[[menus.main]]
+  name = 'Partnerships'
+  pageRef = '/partnerships'
+  weight = 40
+
+[[menus.main]]
+  name = 'Training & Consultancy'
+  pageRef = '/training'
+  weight = 50
+
+[[menus.main]]
+  name = 'F.A.Q.'
+  pageRef = '/faq'
+  weight = 60
+
+[[menus.main]]
+  name = 'Contact'
+  pageRef = '/contact'
+  weight = 70

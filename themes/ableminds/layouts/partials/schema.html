@@ -1,0 +1,21 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "email": "{{ .Site.Params.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "The Wesley Centre, Blythe Road",
+    "addressLocality": "Maltby",
+    "addressCountry": "GB"
+  },
+  "medicalSpecialty": "Psychiatric",
+  "areaServed": "United Kingdom",
+  "serviceType": ["Neurodivergent Assessment", "Counselling", "Psychological Coaching", "Autism Assessment"]
+}
+</script>
+{{ end }}
